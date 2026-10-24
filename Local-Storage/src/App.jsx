@@ -32,6 +32,23 @@ const App = () => {
   localStorage.removeItem("Gender");
   localStorage.removeItem("RelationshipStatus");
 
+
+  // We can also print the objects in the localStorage.
+
+  const data = {
+    name: "Lakshay Khanna",                     // This is the object of data.
+    class:"Btech CSE",
+    gender:"Male",
+    relationshipStatus:"Unmarried",
+    bloodGroup:"A+"
+  }
+
+
+
+  localStorage.setItem("user", JSON.stringify(data))
+
+  const getData = JSON.parse(localStorage.getItem("user"))
+
   //These are the 4 methods of localStorage.
 
   return (
